@@ -24,7 +24,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:luckynumber/lucky_number.dart';
+//import 'package:luckynumber/lucky_number.dart';
 void main()
 {
   runApp(MyApp());
