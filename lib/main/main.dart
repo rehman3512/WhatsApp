@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:whatsapp/Bottom_bar/Bottom_bar.dart';
+import 'package:whatsapp/Google_fonts/Google_fonts.dart';
 import 'package:whatsapp/splash_screen.dart';
 void main()
 {
@@ -18,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: bottom_bar(),
+      home: google_fonts(),
     );
   }
 }
