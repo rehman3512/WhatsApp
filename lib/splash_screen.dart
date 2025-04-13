@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:whatsapp/whatsapp.dart';
+import 'package:whatsapp/Screens/whatsapp_screen/whatsapp.dart';
 import 'package:get/get.dart';
 
 class splash_screen extends StatefulWidget {

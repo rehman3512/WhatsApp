@@ -30,32 +30,45 @@ class _whatsappState extends State<whatsapp> {
           SizedBox(width: 5,),
         ],
       ),
-      floatingActionButton: FloatingActionButton(onPressed: (){},
-        child: Icon(Icons.chat,color: Colors.white,),
-        backgroundColor: Colors.green,),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(onPressed: (){},child:  Icon(Icons.circle_outlined),),
+          SizedBox(height: 20,),
+          FloatingActionButton(onPressed: (){},
+            child: Icon(Icons.chat,color: Colors.white,),
+            backgroundColor: Colors.green,),
+        ],
+      ),
       body: Column(children: [
         Expanded(
-            flex: 7,
+            flex: 10,
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 15,vertical: 5),
+              // height: 45, width: MediaQuerry.of(context).size.width*0.95,
               decoration: BoxDecoration(
                 color: Colors.grey[200],
                 // border: Border.all(color: Colors.white),
                 borderRadius: BorderRadius.circular(20),
               ),
-              child: TextFormField(
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  prefixIcon: Icon(Icons.search),
-                  hintText: "Ask Meta AI or search",
+            //  child: Padding(
+               // padding: EdgeInsets.symmetric(vertical: 3),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    prefixIcon: Icon(Icons.search),
+                    hintText: "Ask Meta AI or search",
+                    hintStyle: TextStyle(fontSize: 15,),
+                  ),
                 ),
-              ),
+             // ),
             )),
         Expanded(
           flex: 90,
           child:  ListView.builder(
 
           itemBuilder: (context,index){
+            int ischecked=index%3;
             return ListTile( onTap: (){
               Get.to(()=>chatview(name: name[index], img: image[index]));
             },
@@ -64,8 +77,8 @@ class _whatsappState extends State<whatsapp> {
               trailing: Column(children: [
                 Text(num[index]),
                 SizedBox(height: 2,),
-                CircleAvatar(radius: 10,backgroundColor: Colors.green,
-                  child: Text("3",style: TextStyle(fontSize: 12),),),
+                ischecked==0? CircleAvatar(radius: 10,backgroundColor: Colors.green,
+                  child: Text("3",style: TextStyle(fontSize: 12),),): SizedBox(),
               ],),);
           }, itemCount: name.length,
         ),)

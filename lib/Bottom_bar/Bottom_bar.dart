@@ -4,7 +4,7 @@ import 'package:whatsapp/Screens/Calls_screen/calls_screen.dart';
 import 'package:whatsapp/Screens/Chats_screen/chats_screen.dart';
 import 'package:whatsapp/Screens/Community_screen/community_screen.dart';
 import 'package:whatsapp/Screens/Updates_screen/updates_screen.dart';
-import 'package:whatsapp/whatsapp.dart';
+import 'package:whatsapp/Screens/whatsapp_screen/whatsapp.dart';
 
 class bottom_bar extends StatefulWidget {
   const bottom_bar({Key? key}): super(key:key);
